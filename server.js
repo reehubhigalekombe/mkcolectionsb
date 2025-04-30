@@ -4,8 +4,8 @@ const connectDB = require("./db");
 const path = require("path");
 const Subscriber = require("./models/Subscriber")
 const authRoutes = require("./routes/auth")
-const verifyToken = require("./middleware/authMiddleware");
-const { message } = require("statuses");
+require('dotenv').config();
+
 
 const app = express();
 connectDB();
