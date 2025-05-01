@@ -12,7 +12,10 @@ connectDB();
 
 const PORT = process.env.PORT || 5500;
 
-app.use(cors());
+app.use(cors({
+    origin: 'https://vbbb.netlify.app',
+    credentials: true
+}));
 app.use(express.json());
 
 app.post("/api/subscribe", async (req, res) => {
